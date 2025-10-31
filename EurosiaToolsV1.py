@@ -63,7 +63,6 @@ def banner():
 
 
 def menu():
-    # Mise en page simple inspirée du style CLI
     print(Fore.CYAN + "[01]" + Fore.WHITE + " IP Tracker")
     print(Fore.CYAN + "[00]" + Fore.WHITE + " Quitter\n")
 
@@ -76,7 +75,6 @@ def prompt_enter(msg="\nAppuyez sur Entrée pour revenir au menu..."):
 
 
 def clear_screen():
-    # tentative simple de nettoyage de terminal (compatible os courants)
     import os
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -94,7 +92,6 @@ def main():
             sys.exit(0)
 
         if choix in ("1", "01"):
-            # utilisation de la fonction track_ip en CLI
             ip_to_track = input(Fore.GREEN + "Entrez une adresse IP (ou domaine) : ").strip()
             if not ip_to_track:
                 print(Fore.YELLOW + "Aucune adresse IP saisie.")
@@ -119,4 +116,5 @@ if __name__ == "__main__":
     main()
 
 input("\nAppuyez sur Entrée pour fermer le programme...")
+
 # EurosiaTools.py
